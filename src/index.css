@@ -3,3 +3,125 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+a {
+  text-decoration: none;
+  color: #252525;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.nav-container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.login-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0px 0px 10px 0px;
+  border: 2px solid #B7B9B8;
+  border-radius: 5px;
+}
+
+.nav ul {
+  margin-bottom: 0px;
+}
+
+.nav li {
+  padding-bottom: 0px;
+  padding-right: 30px;
+}
+
+hr.hr-app-color {
+  border-top: 3px solid #58D99B;
+}
+
+hr.hr-login-color {
+  border-top: 3px solid #B7B9B8;
+  margin-top: 0px;
+}
+
+.center {
+  text-align: center;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.nav li:first-child {
+  padding-left: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.login-img {
+  width: 200px;
+  height: 200px;
+}
+
+.login-subtitle {
+  color: #909291;
+  padding-bottom: 15px;
+  margin-bottom: 0px;
+}
+
+.login-header {
+  background-color: #EBECEB;
+}
+
+.login-header-text {
+  margin-top: 0px;
+  padding-top: 18px;
+}
+
+.login-signin-color {
+  color: #58D99B;
+}
+
+.login-select {
+  margin: 0px 10px 0px 10px;
+}
+
+.login-user-img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  vertical-align: bottom;
+}
+
+.login-single-user {
+  text-align: left;
+}
+
+.login-btn {
+  background-color: #58D99B;
+  color: #fff;
+  margin: 10px 10px 0px 10px;
+  padding: 10px 0px 10px 0px;
+  width: 95%;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}

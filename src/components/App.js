@@ -1,6 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { handleInitialData } from '../actions/shared';
+import LoadingBar from 'react-redux-loading';
+import Login from './Login';
+import Nav from './Nav';
 
 class App extends Component {
   componentDidMount() {
@@ -9,9 +13,20 @@ class App extends Component {
   
   render() {
     return (
-      <div>
-      	Hello World
-      </div>
+      <Router>
+      	<Fragment>
+      		<LoadingBar />
+      		<div className='nav-container'>
+      			<Nav />
+      		</div>
+      		<hr className='hr-app-color' />
+      		<div className='container'>
+      			<div>
+      				<Route path='/' exact component={Login} />
+      			</div>
+      		</div>
+      	</Fragment>
+      </Router>
     );
   }
 }
