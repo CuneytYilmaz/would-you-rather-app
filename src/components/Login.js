@@ -20,14 +20,14 @@ class Login extends Component {
 
 	handleOnChange = (value) => {
       	this.setState({
-        	userName: value,
+        	userName: value.id,
         })
     }
 
 	handleSubmit = () => {
     	const { userName } = this.state;
       	const { dispatch } = this.props;
-      
+
       	dispatch(setAuthedUser(userName));
       
       	this.setState({
@@ -46,7 +46,7 @@ class Login extends Component {
 
     	return(
         	<div className='login-container center' >
-          		<div className='login-header'>
+          		<div className='bg-header'>
           			<h3 className='login-header-text'>Welcome to the Would You Rather App!</h3>
           			<p className='login-subtitle'>Please sign in to continue</p>
          		</div>
