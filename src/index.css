@@ -257,6 +257,7 @@ li {
   font-size: 16px;
   border-radius: 5px;
   border: 2px solid #58D99B;
+  background-color: #FFF;
 }
 
 .view-pool-btn:focus {
@@ -281,6 +282,7 @@ li {
   cursor: pointer;
   border: none;
   font-size: 16px;
+  background-color: #FFF;
 }
 
 .logout-btn {
