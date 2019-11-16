@@ -33,6 +33,7 @@ class Home extends Component {
 	render () {
       	const { answeredQuestions, unansweredQuestions, users, authedUser } = this.props;
 		const { answered } = this.state;
+
 		let questionList = unansweredQuestions;
 
 		if (authedUser === null) {

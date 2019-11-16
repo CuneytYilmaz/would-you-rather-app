@@ -1,9 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { handleAddQuestion } from '../actions/questions';
+import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 class AddQuestion extends Component { 
   	state={
     	optionOne:'',
       	optionTwo:'',
+      	toHome: false,
     }
 
 	handleChangeOptionOne = (e) => {
@@ -28,12 +32,22 @@ class AddQuestion extends Component {
       	const { optionOne, optionTwo } = this.state;
       	const { dispatch } = this.props;
       
-      	dispatch();
+      	dispatch(handleAddQuestion(optionOne, optionTwo));
       
+      	this.setState({
+        	optionOne: '',
+          	optionTwo: '',
+          	toHome: true,
+        })
     }
   
 	render() {
-      	const { optionOne, optionTwo } = this.state;
+      	const { optionOne, optionTwo, toHome } = this.state;
+
+		if (toHome === true) {
+			return <Redirect to='/' />        
+        }
+
     	return(
         	<div className='new-question-container center'>
           		<h2 className='new-question-title'>Create New Question</h2>
@@ -71,4 +85,4 @@ class AddQuestion extends Component {
     }
 }
 
-export default AddQuestion;
+export default connect()(AddQuestion);
