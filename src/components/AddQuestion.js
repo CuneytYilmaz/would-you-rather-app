@@ -30,7 +30,6 @@ class AddQuestion extends Component {
       
       	dispatch();
       
-      	this.setState
     }
   
 	render() {
