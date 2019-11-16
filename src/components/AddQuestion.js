@@ -42,9 +42,10 @@ class AddQuestion extends Component {
     }
   
 	render() {
+      	const { authedUser } = this.props;
       	const { optionOne, optionTwo, toHome } = this.state;
 
-		if (toHome === true) {
+		if (authedUser === null || toHome === true) {
 			return <Redirect to='/' />        
         }
 
@@ -85,4 +86,10 @@ class AddQuestion extends Component {
     }
 }
 
-export default connect()(AddQuestion);
+function mapStateToProps({authedUser}) {
+	return {
+    	authedUser,
+    }
+}
+
+export default connect(mapStateToProps)(AddQuestion);
