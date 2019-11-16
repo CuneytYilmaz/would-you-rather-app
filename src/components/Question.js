@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { handleAnswerQuestion } from '../actions/questions';
 import { connect } from 'react-redux';
 
 class Question extends Component {
   	state={
     	selectedOption: '',
+      	toResult: false,
     }
 
 	handleChange = (e) => {
@@ -18,9 +20,14 @@ class Question extends Component {
     	e.preventDefault();
       
       	const { selectedOption } = this.state;
-      	const { dispatch } = this.props;
+      	const { dispatch, id } = this.props;
       
+      	dispatch(handleAnswerQuestion(id, selectedOption));
       
+      	this.setState({
+        	selectedOption:'',
+          	toResult: true,
+        })
     }
   
 	render() {
