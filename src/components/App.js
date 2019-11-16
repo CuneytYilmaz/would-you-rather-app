@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { handleInitialData } from '../actions/shared';
 import LoadingBar from 'react-redux-loading';
 import Login from './Login';
+import AddQuestion from './AddQuestion';
 import Nav from './Nav';
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
       		<div className='container'>
       			<div>
       				<Route path='/' exact component={Login} />
+					<Route path='/add' exact component={AddQuestion} />
       			</div>
       		</div>
       	</Fragment>

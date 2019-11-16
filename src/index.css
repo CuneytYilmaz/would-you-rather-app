@@ -37,6 +37,14 @@ a {
   border-radius: 5px;
 }
 
+.new-question-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0px 0px 0px 0px;
+  border: 2px solid #B7B9B8;
+  border-radius: 5px;
+}
+
 .question-poll-container{
   max-width: 480px;
   margin: 0 auto 10px auto;
@@ -64,6 +72,11 @@ hr.hr-login-color {
 }
 
 hr.hr-home-color {
+  border-top: 2px solid #B7B9B8;
+  margin-top: 0px;
+}
+
+hr.hr-new-question-color {
   border-top: 2px solid #B7B9B8;
   margin-top: 0px;
 }
@@ -291,4 +304,61 @@ li {
 
 .nav-log-out {
   padding-top: 7px;
+}
+
+.new-question-title {
+	margin: 10px 0px 10px 0px;
+}
+
+.new-question-span-text {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 10px 0px 10px 15px;
+  float: left;
+}
+
+.new-question-text-color{
+  text-align: left;
+  padding: 10px 0px 10px 15px;
+  margin-bottom: 5px;
+}
+
+.new-question-option-text {
+  border-radius: 4px;
+  border: 2px solid #dad7d7;
+  padding: 10px;
+  font-size: 13px;
+  width: 90%;
+}
+
+.new-question-div-or{
+  padding-left: 15px;
+}
+
+.new-question-hr-or {
+  width: 43%;
+  float: left;
+  margin-top: 17px;
+  border-top: 1px solid #DAD7D7;
+}
+
+.new-question-or {
+  width: 10%;
+  float: left;
+  margin: 10px 0px 10px 0px;
+}
+
+.new-question-btn {
+  background-color: #58D99B;
+  color: #fff;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 0px 10px 0px;
+  width: 95%;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.new-question-btn:focus {
+  outline:0;
 }
