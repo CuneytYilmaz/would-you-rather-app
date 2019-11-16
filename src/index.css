@@ -362,3 +362,38 @@ li {
 .new-question-btn:focus {
   outline:0;
 }
+
+.question-author-img {
+  width: 140px;
+  height: 140px;
+  padding: 10px 0px 10px 10px;
+}
+
+.question-header{
+  text-align: left;
+  margin-top: 0px;
+}
+
+.question-option {
+  margin-left: 7px;
+  font-size: 14px;
+}
+
+.question-option-block {
+  margin-bottom: 7px;
+}
+
+.question-btn {
+  background-color: #58D99B;
+  color: #fff;
+  padding: 7px 0px 7px 0px;
+  width: 95%;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.question-btn:focus {
+  outline:0;
+}

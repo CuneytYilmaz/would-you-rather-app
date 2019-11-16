@@ -7,7 +7,7 @@ import { Redirect } from 'react-router-dom';
 class QuestionContainer extends Component {
   
 	render() {
-      	const { isError, isAnswered, authedUser } = this.props;
+      	const { isError, isAnswered, id, authedUser } = this.props;
 
 		if (authedUser === null) {
         	return(<Redirect to='/' />)
@@ -22,8 +22,8 @@ class QuestionContainer extends Component {
         	return(
               <div>
                   {!isAnswered
-                      ? ( <Question /> )
-                      : ( <Result /> )}
+                      ? ( <Question id={id} /> )
+                      : ( <Result id={id} /> )}
               </div>
         	)
         }
@@ -43,6 +43,7 @@ function mapStateToProps ({ questions, authedUser }, props ) {
       				? question.optionOne.votes.includes(authedUser) || 
       				  question.optionTwo.votes.includes(authedUser)
                   	: null,
+      	id,
       	authedUser,
     }
 }
