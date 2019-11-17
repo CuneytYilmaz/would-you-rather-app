@@ -10,8 +10,8 @@ class Result extends Component {
       const optionOneCount = question.optionOne.votes.length;
       const optionTwoCount = question.optionTwo.votes.length;
       const totalCount = optionOneCount + optionTwoCount;
-      const optionOnePercentage = ( optionOneCount / totalCount ) * 100;
-      const optionTwoPercentage = ( optionTwoCount / totalCount ) * 100;
+      const optionOnePercentage = Math.round(( optionOneCount / totalCount ) * 100);
+      const optionTwoPercentage = Math.round(( optionTwoCount / totalCount ) * 100);
       
     	return(
         	<div className='home-container center'>
