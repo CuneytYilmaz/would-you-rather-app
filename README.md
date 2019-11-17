@@ -28,38 +28,38 @@ npm start
 1. **Login Page** : In this pages, you can see your categorized books in 3 shelfs. These shelfs are; Currently Reading, Want To Read and Read. You can change the book's shelfs. It allows you to manage your library.
 
 <p align="center">
-<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/login.png" height="450"/>
+<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/src/img/login.png" height="450"/>
 </p>
 
 2. **Home Page** : You can search the books in library thanks to api calls. Also you can select and add book to your shelfs, change the current shelf of book which already in your shelf.
 
 <p align="center">
-<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/home1.png" height="450"/>
-<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/home2.png" height="450"/>
+<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/src/img/home1.png" height="450"/>
+<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/src/img/home2.png" height="450"/>
 </p>
 
 3. **Question Page** : You can search the books in library thanks to api calls. Also you can select and add book to your shelfs, change the current shelf of book which already in your shelf.
 
 <p align="center">
-<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/question.png" height="450"/>
+<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/src/img/question.png" height="450"/>
 </p>
 
 4. **Result Page** : You can search the books in library thanks to api calls. Also you can select and add book to your shelfs, change the current shelf of book which already in your shelf.
 
 <p align="center">
-<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/result.png" height="450"/>
+<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/src/img/result.png" height="450"/>
 </p>
 
 5. **New Question Page** : You can search the books in library thanks to api calls. Also you can select and add book to your shelfs, change the current shelf of book which already in your shelf.
 
 <p align="center">
-<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/newQuestion.png" height="450"/>
+<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/src/img/newQuestion.png" height="450"/>
 </p>
 
 6. **Leader Board Page** : You can search the books in library thanks to api calls. Also you can select and add book to your shelfs, change the current shelf of book which already in your shelf.
 
 <p align="center">
-<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/leaderboard.png" height="450"/>
+<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/src/img/leaderboard.png" height="450"/>
 </p>
 
  # License
