@@ -528,3 +528,19 @@ li {
 .bg-leader-board {
   background-color: #f2f3f2;
 }
+
+.inner-triangle{
+    border-right: 30px solid transparent;
+    border-left: 30px solid #cbd0cd;
+    border-bottom: 30px solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.leader-board-badge {
+  position: absolute;
+  top: 1px;
+  left: -26px;
+}

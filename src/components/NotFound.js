@@ -4,7 +4,7 @@ export default function NotFound () {
 	return (
       	<div className="center">
             <h2>Error 404</h2>
-            <p>Oopss, This Pool doesn't exists!</p>
+            <p>Oopss, This Page doesn't exists!</p>
         </div>
     )
 }

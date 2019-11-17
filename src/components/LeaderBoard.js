@@ -1,11 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { FaTrophy } from 'react-icons/fa';
 
 class LeaderBoard extends Component {
 	render() {
       	const { users, authedUser } = this.props;
-      
+
       	if (authedUser === null) {
           return <Redirect to='/' />
         }
@@ -13,8 +14,17 @@ class LeaderBoard extends Component {
     	return(
         	<Fragment>
           		{users &&
-                 users.map((user) => (
+                 users.map((user, index) => (
           			<div key={user.id} className='home-container center mb-10 dp-flex'>
+          			  <div className="inner-triangle">
+                        <span className='leader-board-badge'>
+                          {index === 0
+                          	? <FaTrophy color={'#f3f308'} size={13} />
+    						: index === 1
+    						? <FaTrophy color={'#58D99B'} size={13} />
+    						: <FaTrophy color={'#464242'} size={13} /> }
+      					</span>
+      				  </div>
                       <div className='leader-board-card-left'>
                           <img
                               alt={user.id}
