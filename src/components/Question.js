@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { handleAnswerQuestion } from '../actions/shared';
 import { connect } from 'react-redux';
+import Result from './Result';
 
 class Question extends Component {
   	state={
@@ -31,8 +32,12 @@ class Question extends Component {
     }
   
 	render() {
-      	const { question, author } = this.props;
-		const { selectedOption } = this.state;
+      	const { question, author, id } = this.props;
+		const { selectedOption, toResult } = this.state;
+
+		if (toResult) {
+          return (<Result id={id} />)
+        }
 
     	return(
         	<div className='home-container center'>
@@ -86,7 +91,7 @@ function mapStateToProps({ questions, users, authedUser }, { id }){
 	return {
     	question: questions[id],
       	author: users[questions[id].author],
-      	authedUser,
+      	id,
     }
 }
 

@@ -397,3 +397,30 @@ li {
 .question-btn:focus {
   outline:0;
 }
+
+.result-block {
+  padding: 10px 10px 10px 10px;
+  width: 85%;
+  margin-bottom: 10px;
+  border: 2px solid #B7B9B8;
+  border-radius: 5px;
+}
+
+.fs-15 {
+  font-size: 15px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.result-selected-block {
+  color: #58D99B;
+  border-color: #58D99B;
+  background-color: #ebf9ec;
+}
+
+.result-total-votes {
+  color: #000;
+  text-align: center;
+}
