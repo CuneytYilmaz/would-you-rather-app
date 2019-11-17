@@ -41,25 +41,25 @@ npm start
 3. **Question Page** : You can search the books in library thanks to api calls. Also you can select and add book to your shelfs, change the current shelf of book which already in your shelf.
 
 <p align="center">
-<img src="https://github.com/CuneytYilmaz/reactnd-myreads-app/blob/master/question.png" height="450"/>
+<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/question.png" height="450"/>
 </p>
 
 4. **Result Page** : You can search the books in library thanks to api calls. Also you can select and add book to your shelfs, change the current shelf of book which already in your shelf.
 
 <p align="center">
-<img src="https://github.com/CuneytYilmaz/reactnd-myreads-app/blob/master/result.png" height="450"/>
+<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/result.png" height="450"/>
 </p>
 
 5. **New Question Page** : You can search the books in library thanks to api calls. Also you can select and add book to your shelfs, change the current shelf of book which already in your shelf.
 
 <p align="center">
-<img src="https://github.com/CuneytYilmaz/reactnd-myreads-app/blob/master/newQuestion.png" height="450"/>
+<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/newQuestion.png" height="450"/>
 </p>
 
 6. **Leader Board Page** : You can search the books in library thanks to api calls. Also you can select and add book to your shelfs, change the current shelf of book which already in your shelf.
 
 <p align="center">
-<img src="https://github.com/CuneytYilmaz/reactnd-myreads-app/blob/master/leaderboard.png" height="450"/>
+<img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/leaderboard.png" height="450"/>
 </p>
 
  # License
