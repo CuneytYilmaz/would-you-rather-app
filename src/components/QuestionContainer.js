@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Question from './Question';
 import Result from './Result';
+import NotFound from './NotFound';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
@@ -15,8 +16,7 @@ class QuestionContainer extends Component {
       
       	// This If-Else logic created to handle init time of questions array to store. It occurs only when refresh "/questions:id" URL.
       	if (isError && isAnswered === null) {
-          	// todo: Error Page
-        	return(<div>Error Page</div>) 
+        	return(<NotFound />) 
         } 
       	else if (isAnswered !== null) {
         	return(

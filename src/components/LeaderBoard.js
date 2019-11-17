@@ -1,15 +1,20 @@
 import React, { Component, Fragment } from 'react';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class LeaderBoard extends Component {
 	render() {
-      	const { users } = this.props;
-      	console.log('users',users)
+      	const { users, authedUser } = this.props;
+      
+      	if (authedUser === null) {
+          return <Redirect to='/' />
+        }
+      
     	return(
         	<Fragment>
           		{users &&
                  users.map((user) => (
-          			<div className='home-container center mb-10 dp-flex'>
+          			<div key={user.id} className='home-container center mb-10 dp-flex'>
                       <div className='leader-board-card-left'>
                           <img
                               alt={user.id}
@@ -41,7 +46,7 @@ class LeaderBoard extends Component {
     }
 }
 
-function mapStateToProps ({ users }) {
+function mapStateToProps ({ users, authedUser }) {
   	let usersArr = [];
   
   	Object.entries(users).forEach(
@@ -59,7 +64,8 @@ function mapStateToProps ({ users }) {
     )
   
 	return {
-    	users: usersArr.sort((a,b) => b.score - a.score)
+    	users: usersArr.sort((a,b) => b.score - a.score),
+        authedUser
     }
 }
 

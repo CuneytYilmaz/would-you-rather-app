@@ -106,9 +106,11 @@ class Home extends Component {
 function mapStateToProps ({ questions, users, authedUser }) {
   	return {
       	answeredQuestions: Object.values(questions).filter(qid => qid.optionOne.votes.includes(authedUser) 
-                                                           || qid.optionTwo.votes.includes(authedUser)),
+                                                           || qid.optionTwo.votes.includes(authedUser))
+      													   .sort((a,b) => b.timestamp - a.timestamp),
         unansweredQuestions: Object.values(questions).filter(qid => !qid.optionOne.votes.includes(authedUser) 
-                                                           && !qid.optionTwo.votes.includes(authedUser)),
+                                                           && !qid.optionTwo.votes.includes(authedUser))
+      													   .sort((a,b) => b.timestamp - a.timestamp),
       	users,
     	authedUser,
     }
