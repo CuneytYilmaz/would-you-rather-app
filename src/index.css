@@ -418,6 +418,7 @@ li {
   color: #58D99B;
   border-color: #58D99B;
   background-color: #ebf9ec;
+  position: relative;
 }
 
 .result-total-votes {
@@ -438,6 +439,14 @@ li {
 
 .result-choice {
   font-size: 12px;
-  text-align: right;
-  margin-bottom: 3px;
+  position: absolute;
+  top: -15%;
+  right: -8%;
+  padding-top: 6px;
+  background-color: #cccc00;
+  color: #fff;
+  border-radius: 30px;
+  width: 40px;
+  height: 34px;
+  bottom: auto;
 }

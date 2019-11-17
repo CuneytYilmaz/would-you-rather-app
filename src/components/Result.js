@@ -32,7 +32,7 @@ class Result extends Component {
                                         	? 'result-block bg-header result-selected-block' 
                                         	: 'result-block bg-header' } >
 
-						{selectedOption === 'optionOne' && <div className='result-choice'>Your Answer</div>}
+						{selectedOption === 'optionOne' && <div className='result-choice center'>Your vote</div>}
 						<span className='fs-15'>Would you rather {question.optionOne.text}?</span>
 				
 						<Progress percent={optionOnePercentage} className='mt-10'
@@ -42,11 +42,12 @@ class Result extends Component {
                               color: '#58D99B'
                             },
                             active: {
-                              color: '#58D99B'
+                              color: '#58D99B',
+                              trailColor: '#B7B9B8'
                             },
 							default: {
                               symbol: optionOnePercentage + '%',
-                              trailColor: '#fff'
+                              trailColor: '#B7B9B8'
                             }
                           }}
                         />
@@ -56,7 +57,7 @@ class Result extends Component {
                                         	? 'result-block bg-header result-selected-block' 
                                         	: 'result-block bg-header' } >
 
-						{selectedOption === 'optionTwo' && <div className='result-choice'>Your Answer</div>}
+						{selectedOption === 'optionTwo' && <div className='result-choice center'>Your vote</div>}
 						<span className='fs-15'>Would you rather {question.optionTwo.text}?</span>
 						<br />
 						<Progress percent={optionTwoPercentage} className='mt-10'
@@ -66,11 +67,12 @@ class Result extends Component {
                               color: '#58D99B'
                             },
                             active: {
-                              color: '#58D99B'
+                              color: '#58D99B',
+                              trailColor: '#B7B9B8'
                             },
 							default: {
                               symbol: optionTwoPercentage + '%',
-                              trailColor: '#fff'
+                              trailColor: '#B7B9B8'
                             }
                           }}
                         />
