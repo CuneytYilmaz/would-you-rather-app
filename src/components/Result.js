@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Progress } from 'react-sweet-progress';
 
 class Result extends Component {
 	render() {
       const { question, author, selectedOption } = this.props;
-      
-	  const optionOneCount = question.optionOne.votes.length;
-      const optionTwoCount = question.optionOne.votes.length;
-      const totalCount = optionOneCount + optionOneCount;
+      //let { optionOneCount, optionTwoCount, totalCount, optionOnePercentage, optionTwoPercentage } = 0;
+	  
+      const optionOneCount = question.optionOne.votes.length;
+      const optionTwoCount = question.optionTwo.votes.length;
+      const totalCount = optionOneCount + optionTwoCount;
       const optionOnePercentage = ( optionOneCount / totalCount ) * 100;
       const optionTwoPercentage = ( optionTwoCount / totalCount ) * 100;
       
@@ -21,7 +23,7 @@ class Result extends Component {
 					<img
 						alt={author.id}
 						src={author.avatarURL}
-						className='question-author-img center'
+						className='question-author-img center result-author-img'
 					/>
 				</div>
 				<div className='in-block-right'>
@@ -29,20 +31,50 @@ class Result extends Component {
 					<div className={selectedOption === 'optionOne' 
                                         	? 'result-block bg-header result-selected-block' 
                                         	: 'result-block bg-header' } >
+
+						{selectedOption === 'optionOne' && <div className='result-choice'>Your Answer</div>}
 						<span className='fs-15'>Would you rather {question.optionOne.text}?</span>
-						<br />
-						{optionOnePercentage}
-						<br />
-						<div className='result-total-votes fs-15'>{optionOneCount} out of {totalCount} votes</div>
+				
+						<Progress percent={optionOnePercentage} className='mt-10'
+							theme={{
+                            success: {
+                              symbol: optionOnePercentage + '%',
+                              color: '#58D99B'
+                            },
+                            active: {
+                              color: '#58D99B'
+                            },
+							default: {
+                              symbol: optionOnePercentage + '%',
+                              trailColor: '#fff'
+                            }
+                          }}
+                        />
+						<div className='result-total-votes'>{optionOneCount} out of {totalCount} votes</div>
 					</div>
 					<div className={selectedOption === 'optionTwo' 
                                         	? 'result-block bg-header result-selected-block' 
                                         	: 'result-block bg-header' } >
+
+						{selectedOption === 'optionTwo' && <div className='result-choice'>Your Answer</div>}
 						<span className='fs-15'>Would you rather {question.optionTwo.text}?</span>
 						<br />
-						{optionTwoPercentage}
-						<br />
-						<div className='result-total-votes fs-15'>{optionTwoCount} out of {totalCount} votes</div>
+						<Progress percent={optionTwoPercentage} className='mt-10'
+							theme={{
+                            success: {
+                              symbol: optionTwoPercentage + '%',
+                              color: '#58D99B'
+                            },
+                            active: {
+                              color: '#58D99B'
+                            },
+							default: {
+                              symbol: optionTwoPercentage + '%',
+                              trailColor: '#fff'
+                            }
+                          }}
+                        />
+						<div className='result-total-votes'>{optionTwoCount} out of {totalCount} votes</div>
 					</div>
 				</div>
           	</div>
@@ -54,7 +86,7 @@ function mapStateToProps ({ questions, users, authedUser}, { id }) {
 	return {
     	question: questions[id],
       	author: users[questions[id].author],
-      	selectedOption: users[questions[id].author].answers[id]
+      	selectedOption: users[authedUser].answers[id]
     }
 }
 

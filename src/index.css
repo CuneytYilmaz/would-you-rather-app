@@ -423,4 +423,21 @@ li {
 .result-total-votes {
   color: #000;
   text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.result-author-img {
+  margin-top: 55px;
+}
+
+.result-choice {
+  font-size: 12px;
+  text-align: right;
+  margin-bottom: 3px;
 }
