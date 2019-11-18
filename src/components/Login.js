@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import Select from 'react-select';
 import { setAuthedUser } from '../actions/authedUser';
 import Home from './Home';
@@ -26,14 +27,20 @@ class Login extends Component {
 
 	handleSubmit = () => {
     	const { userName } = this.state;
-      	const { dispatch } = this.props;
+      	const { dispatch, id } = this.props;
 
       	dispatch(setAuthedUser(userName));
       
       	this.setState({
         	userName: '',
-          	toHome: true,
+          	toHome: id === null
+          			? true
+          			: false,
         });
+      
+      	if (id !== null) {
+        	this.props.history.push(`/questions/${id}`)
+        }
     }
 
 	render () {
@@ -76,11 +83,12 @@ class Login extends Component {
     }
 }
 
-function mapStateToProps ({ users, authedUser }) {
+function mapStateToProps ({ users, authedUser }, { id }) {
 	return {
     	users: Object.values(users),
+      	id: id ? id : null,
       	authedUser
     }
 }
 
-export default connect(mapStateToProps)(Login);
+export default withRouter(connect(mapStateToProps)(Login));

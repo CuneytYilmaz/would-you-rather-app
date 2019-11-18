@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Question from './Question';
 import Result from './Result';
 import NotFound from './NotFound';
+import Login from './Login';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
 
 class QuestionContainer extends Component {
   
@@ -11,7 +11,7 @@ class QuestionContainer extends Component {
       	const { isError, isAnswered, id, authedUser } = this.props;
 
 		if (authedUser === null) {
-        	return(<Redirect to='/' />)
+        	return <Login id={id} />
         }
       
       	// This If-Else logic created to handle init time of questions array to store. It occurs only when refresh "/questions:id" URL.
