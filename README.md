@@ -62,6 +62,10 @@ npm start
 <img src="https://github.com/CuneytYilmaz/would-you-rather-app/blob/master/src/img/leaderboard.png" height="450"/>
 </p>
 
+ # Contributing
+
+Would-You-Rather-App was originally written and maintaned by Cuneyt Yilmaz. Many improvements and bugfixes were contributed by the [open source community](https://github.com/cuneytyilmaz/would-you-rather-app/graphs/contributors).
+
  # License
 
 MIT. Please see the [license file](LICENSE) for more information.

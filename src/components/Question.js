@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Result from './Result';
 
 class Question extends Component {
-  	state={
+	state={
     	selectedOption: '',
       	toResult: false,
     }
